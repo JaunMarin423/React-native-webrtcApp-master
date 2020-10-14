@@ -63,7 +63,7 @@ export default function CallScreen({navigation, ...props}) {
 
   useEffect(() => {
     navigation.setOptions({
-      title: 'Your ID - ' + userId,
+      title: 'Correo - ' + userId,
       headerRight: () => (
         <Button title="Logout" mode="text" onPress={onLogout} style={{paddingRight: 10}}/>
       ),
@@ -326,13 +326,13 @@ export default function CallScreen({navigation, ...props}) {
     <View style={styles.root}>
       <View style={styles.inputField}>
         <TextInput
-          label="Enter Friends Id"
+          placeholder="Correo de amigo"
           mode="outlined"
           style={{marginBottom: 7}}
           onChangeText={text => setCallToUsername(text)}
         />
         <Button
-          title="Call"
+          title="Llamar"
           mode="contained"
           onPress={onCall}
           loading={calling}
@@ -343,11 +343,11 @@ export default function CallScreen({navigation, ...props}) {
 
       <View style={styles.videoContainer}>
         <View style={[styles.videos, styles.localVideos]}>
-          <Text>Your Video</Text>
+          <Text>Tú</Text>
           <RTCView streamURL={localStream.toURL()} style={styles.localVideo} />
         </View>
         <View style={[styles.videos, styles.remoteVideos]}>
-          <Text>Friends Video</Text>
+          <Text>Amigos</Text>
           <RTCView
             streamURL={remoteStream.toURL()}
             style={styles.remoteVideo}
@@ -365,6 +365,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   inputField: {
+    backgroundColor: '#bfd4e7',
     marginBottom: 10,
     flexDirection: 'column',
   },

@@ -36,12 +36,12 @@ export default function LoginScreen(props) {
           style={styles.input}
         />
         <Text style={styles.heading2}>Contraseña</Text>
-        <TextInput
+        {/* <TextInput
           placeholder="Contraseña"
           onChangeText={text => setUserPass(text)}
           mode="outlined"
           style={styles.input}
-        />
+        /> */}
 
         <Button onPress={login} title="hola"/>
 
